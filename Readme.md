@@ -1,7 +1,7 @@
 ﻿# Личный проект «Нёрдс»
 
 * Студент: [Дмитрий Бурнацев](https://up.htmlacademy.ru/htmlcss/18/user/440547).
-* Наставник: [Юрий Зайцев] (https://htmlacademy.ru/profile/id89805).
+* Наставник: [Юрий Зайцев](https://htmlacademy.ru/profile/id89805).
 
 ---
 
