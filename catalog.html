@@ -9,9 +9,9 @@
 <body>
     <header class="main-header">
         <a class="small-header-logo">
-            <img src="#" class="main-header-logo" alt="Логотип">
+            <img src="img/nerds-logo.svg" class="main-header-logo" alt="Логотип">
         </a>
-        <nav class="main-navigation">
+        <nav class="main-navigation container">
             <ul class="site-navigation">
                 <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
@@ -24,18 +24,33 @@
         </nav>
         <h1 class="catalog-main-title">Магазин готовых шаблонов</h1>
     </header>
-    <main class="container">
+    <main class=" page-content container">
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" method="get" action="№">
-                <fieldset>
-                    <legend>Стоимость:</legend>
-                    <input type="range" min="0" max="30000">
-                    <output>0</output>
-                </fieldset>
+                <div class="price-range">
+                    <h2 class="sidebar-title">Стоимость:</h2>
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div style="width:69%;" class="bar"></div>
+                        </div>
+                        <div class="toggle min-toggle"></div>
+                        <div class="toggle max-toggle"></div>
+                    </div>
+                    <div class="price-controls">
+                        <p>
+                            <label for="min-price">От</label>
+                            <input class="min-price" type="text" id="min-price" value="0">
+                        </p>
+                        <p>
+                            <label for="max-price">До</label>
+                            <input class="max-price" type="text" id="max-price" value="15 000">
+                        </p>
+                    </div>
+                </div>
                 <fieldset>
                     <legend>Сетка:</legend>
-                    <ul class="visually-hidden">
+                    <ul class="filter">
                         <li class="filter-option">
                             <input type="radio" name="produck-type" value="adaptive" checked>Адаптивная
                         </li>
@@ -48,7 +63,7 @@
                 </fieldset>
                 <fieldset>
                     <legend>Особенности:</legend>
-                    <ul class="visually-hidden">
+                    <ul class="filter">
                         <li class="filter-option">
                             <input type="checkbox" value="adaptive" name="slider" checked>Слайдер
                         </li>
@@ -67,7 +82,7 @@
             </form>
         </section>
         <!-- Блок с сортировкой шаблонов -->
-        <section class="catalog-contaainer">
+        <section class="catalog container">
             <h2 class="visually-hidden">Список шаблонов</h2>
             <div class="sort-container">
                 <h2>Сортировать:</h2>
@@ -109,7 +124,7 @@
                 <li class="catalog-item">
                     <h3>
                         <a href="catalog-item.html">
-                            <span class="catalog-item-name">PINK APP</span><br>
+                            <span class="catalog-item-name">Pink app</span><br>
                             <span class="catalog-item-title">Продуктовый лендинг приложения для iOS и Android</span>
                         </a>
                     </h3>
@@ -125,23 +140,7 @@
                 <li class="catalog-item">
                     <h3>
                         <a href="catalog-item.html">
-                            <span class="catalog-item-name">PINK APP</span><br>
-                            <span class="catalog-item-title">Продуктовый лендинг приложения для iOS и Android</span>
-                        </a>
-                    </h3>
-                    <p class="catalog-item-image">
-                        <a href="catalog-item.html">
-                            <img src="#" alt="PinkAPP">
-                        </a>
-                    </p>
-                    <p>
-                        <a class="button" href="#">99000</a>
-                    </p>
-                </li>
-                <li class="catalog-item">
-                    <h3>
-                        <a href="catalog-item.html">
-                            <span class="catalog-item-name">BARBERSHOP</span><br>
+                            <span class="catalog-item-name">Barbershop</span><br>
                             <span class="catalog-item-title">Сайт салоны красоты. Для мужчин, да.</span>
                         </a>
                     </h3>
@@ -157,7 +156,7 @@
                 <li class="catalog-item">
                     <h3>
                         <a href="catalog-item.html">
-                            <span class="catalog-item-name">MISHKA</span><br>
+                            <span class="catalog-item-name">Mishka</span><br>
                             <span class="catalog-item-title">Интернет-магазин вязаных игрушек</span>
                         </a>
                     </h3>
@@ -173,7 +172,7 @@
                 <li class="catalog-item">
                     <h3>
                         <a href="catalog-item.html">
-                            <span class="catalog-item-name">A PLUS</span><br>
+                            <span class="catalog-item-name">A plus</span><br>
                             <span class="catalog-item-title">Лендинг курсов повышения квалификации</span>
                         </a>
                     </h3>
@@ -189,7 +188,7 @@
                 <li class="catalog-item">
                     <h3>
                         <a href="catalog-item.html">
-                            <span class="catalog-item-name">КВАСТ</span><br>
+                            <span class="catalog-item-name">Кваст</span><br>
                             <span class="catalog-item-title">Промо-сайт производителя крафтового кваса</span>
                         </a>
                     </h3>
@@ -215,22 +214,26 @@
         <div class="map">
         </div>
         <section class="contacts-block">
-            <p class="contact-us">
-                <b>Nёrds Design Studio</b> 191186, Санкт-Петербург, <br> ул. Б. Конюшенная, д.19/8<br>
-                <br> тел. +7 (812) 275-75-75<br>
+            <p class="contact-title">
+                <b>Nёrds Design Studio</b>
+            </p>
+            <p class="contact-us-content">191186, Санкт-Петербург, <br> ул. Б. Конюшенная, д.19/8<br>
+            </p>
+            <p class="contact-us-content">
+                <a class="contact-us-phone" href="tell.+78122757575">тел. +7 (812) 275-75-75</a>
                 <a class="contact-btn" href="#">Напишите нам</a>
             </p>
         </section>
-        <section>
+        <section class="social container">
             <ul>
                 <li>
-                    <a class="social-link"><img src="#" alt="Vk"></a>
+                    <a class="social-link vk" href="#">Vk</a>
                 </li>
                 <li>
-                    <a class="social-link"><img src="#" alt="Facebook"></a>
+                    <a class="social-link fb" href="#">Facebook</a>
                 </li>
                 <li>
-                    <a class="social-link"><img src="#" alt="instagram"></a>
+                    <a class="social-link inst" href="#">Instagram</a>
                 </li>
             </ul>
             <p><b>Давайте дружить, это выгодно</b><br> Скидка 10% для друзей из социальных сетей</p>
